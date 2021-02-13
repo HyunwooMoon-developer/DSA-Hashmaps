@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 class HashMap {
   constructor(initialCapacity = 8) {
     //length is as well as capacity
@@ -93,25 +94,4 @@ class HashMap {
   }
 }
 
-HashMap.MAX_LOAD_RATIO = 0.5;
-HashMap.SIZE_RATIO = 3;
-
-function main(){
-    let lotr = new HashMap();
-
-    lotr.set("Hobbit", "Bilbo")
-    lotr.set("Hobbit", "Frodo")
-    lotr.set("Wizard", "Gandalf")
-    lotr.set("Human", "Aragorn")
-    lotr.set("Elf", "Legolas")
-    lotr.set("Maiar", "The Necromancer")
-    lotr.set("Maiar", "Sauron")
-    lotr.set("RingBearer", "Gollum")
-    lotr.set("LadyOfLight", "Galadriel")
-    lotr.set("HalfElven", "Arwen")
-    lotr.set("Ent", "Treebeard")
-
-    console.log(lotr);
-}
-
-main();
+module.exports = HashMap;
