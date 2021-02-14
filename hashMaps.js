@@ -24,6 +24,14 @@ class HashMap {
     return hash >>> 0;
   }
 
+  get(key){
+    const index = this._findSlot(key);
+    if(this._hashTable[index] === undefined){
+      throw new Error('Key error');
+    }
+    return this._hashTable[index].value;
+  }
+
   //The MAX_LOAD_RATIO is the highest that
   // the ratio between the length and the capacity will be allowed to reach.
   //MAX_LOAD_RATIO, we keep track of how full the hashmap is. When it is a certain % full,
